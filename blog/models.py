@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 # from taggit import TaggableManager
 
 # Create your models here.
@@ -26,8 +27,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def __slug__(self):
-        return self.slug
+    def get_absolute_url(self):
+        return reverse('post',kwargs={'slug':self.slug})
     
     def __content__(self):
         return self.content

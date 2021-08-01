@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     # 'taggit',
     'django_summernote',
+    'django.utils.six',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
